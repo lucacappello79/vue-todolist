@@ -23,18 +23,21 @@
     <h1>Wishlist - Places</h1>
 
 
-    <ul>
+    <ol class="gradient-list">
 
-        <li v-for="(place, index) in destinations" v-bind:style="{ textDecoration: place.done ? 'line-through' : 'none' }">
+        <li v-for="(place, index) in destinations">
 
-            {{place.text}} -- 
+            <span v-bind:style="{ textDecoration: place.done ? 'line-through' : 'none' }">
+                {{place.text}}
+            </span>
+
             <span @click="deletePlace(index)">
-            <i class="fa-regular fa-circle-xmark"></i>
+                <i class="fa-regular fa-circle-xmark"></i>
             </span>
 
         </li>
 
-    </ul>
+    </ol>
 
     <input id="input" type="text" v-model="newPlace" @keyup.enter="addPlace()" placeholder="choose location">
     <br>

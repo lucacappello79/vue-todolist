@@ -22,7 +22,7 @@ const { createApp } = Vue
              done: false,
              
          }, {
-             text: 'Innsbruck in estate',
+             text: 'Innsbruck',
              done: true,
             
          }, {

@@ -1,0 +1,52 @@
+#app{
+    margin-left: 3em;
+}
+
+h1 {
+    color: black;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 0, 0, 0.5);
+}
+
+ol {
+	list-style-type: none;
+	counter-reset: li;
+}
+
+li {
+	font-size: 2rem;
+    list-style-type: none;
+    padding: 8px 0;
+}
+
+li:before {
+  counter-increment: li;
+  content: counter(li);
+	color: red;
+	margin-right: 0.25em;
+}
+
+button{
+    background-color: black;
+    padding: 10px 15px;
+    color: white;
+    border: 3px solid red;
+    border-radius: 20px;
+}
+
+span{
+    margin-right: 20px;
+}
+
+.fa-regular{
+    color: red;
+}
+
+input[type="text"] {
+    border: 1px solid red;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  input[type="text"]::placeholder {
+    color: black;
+  }
