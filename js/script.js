@@ -67,6 +67,12 @@ const { createApp } = Vue
 
         },
 
+        changeStatus(placeIndex) {
+
+            this.destinations[placeIndex].done = !this.destinations[placeIndex].done;
+
+          },
+
     }
 
   }).mount('#app')

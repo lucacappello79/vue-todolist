@@ -27,7 +27,7 @@
 
         <li v-for="(place, index) in destinations">
 
-            <span v-bind:style="{ textDecoration: place.done ? 'line-through' : 'none' }">
+            <span v-bind:style="{ textDecoration: place.done ? 'line-through' : 'none' }" @click="changeStatus(index)">
                 {{place.text}}
             </span>
 
