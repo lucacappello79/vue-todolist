@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ---FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- --- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>ToDoList</title>
+</head>
+
+<body>
+<!-- Vue Js -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+
+    <h1>Wishlist - Places</h1>
+
+
+    <ul>
+
+        <li v-for="(place, index) in destinations" v-bind:style="{ textDecoration: place.done ? 'line-through' : 'none' }">
+
+            {{place.text}} -- 
+            <span @click="deletePlace(index)">
+            <i class="fa-regular fa-circle-xmark"></i>
+            </span>
+
+        </li>
+
+    </ul>
+
+    <input id="input" type="text" v-model="newPlace" @keyup.enter="addPlace()" placeholder="choose location">
+    <br>
+    <br>
+    <button @click="addPlace()">Add location</button>
+  
+
+</div>
+<!--  ---JAVASCRIPT -->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
